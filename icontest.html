@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>字体图标</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_518151_92s4itnh8ril766r.css">
+    <style>
+        .username,
+        .password {
+            margin: 10px;
+           
+            height: 20px;
+        }
+
+        .login {
+
+            width: 250px;
+            height: 300px;
+            border: 1px solid #666;
+            margin: 30px auto;
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 60px;
+            font-style: normal;
+        }
+
+        .picture {
+            text-align: center;
+            margin: 20px;
+
+        }
+
+
+        .icon-usuers {
+            font-size: 16px;
+            padding: 5px;
+            display: inline-block;
+            float: left;
+        }
+
+        .usertext {
+            display: inline-block;
+            float: left;
+
+
+        }
+
+
+        .icon-key {
+            font-size: 16px;
+            padding: 5px;
+            display: inline-block;
+            float: left;
+        }
+
+        .keytext {
+            display: inline-block;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="yilengfeng.php" method="post">
+        <div class="login">
+            <div class="picture">
+                <span class="iconfont icon-usered"></span>
+            </div>
+            <div class="username">
+                <div class="usericon">
+                    <span class="iconfont icon-usuers"></span>
+                </div>
+                <div class="usertext">
+                    <label for="userinput"></label>
+                    <input id="userinput" name="userinput" placeholder="用户名">
+                </div>
+            </div>
+            <div class="password">
+                <div class="keyicon">
+                    <span class="iconfont icon-key"></span>
+                </div>
+                <div class="keytext">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="keyinput" placeholder="密码">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
