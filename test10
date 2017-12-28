@@ -1,0 +1,93 @@
+<head>
+  <meta charset="utf-8">
+  <title>风景列表</title>
+  <style>
+   .content::after {
+     content:'';
+     display: block;
+     clear: both;
+   }
+   ul,li {
+     margin: 0px;
+     padding: 0px;
+   } 
+
+
+   .part {
+     width: 260px;
+     float: left;
+     margin-left:10px;
+     margin-top: 30px;
+     list-style: none;
+     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+   }
+   .content {
+     margin-left: -10px;
+   }
+  .layout {
+     width: 800px;
+  
+  }
+  .part p {
+     text-align: center;
+  }
+  .layout h1{
+     color: #666;
+     text-align: center;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 10px;
+  }
+
+
+
+  .part>img{
+     width: 100%;
+     opacity: 0.75;
+  }
+ </style>
+</head>
+<body>
+  <div class="layout">
+    <h1>风景列表</h1>
+    <ul class="content">
+        <li class="part">
+          <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+        <li class="part">
+            <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+        <li class="part">
+            <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+        <li class="part">
+            <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+        <li class="part">
+            <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+        <li class="part">
+            <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+          <div class="title">
+            <p>风景如画</p>
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+</body>
+</html>
