@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>任务12</title>
+    <style>
+        div {
+            margin: 0 auto;
+        }
+        .box1 {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-top: 30px;
+        }
+
+        .box1::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid #888;
+            border-left: 10px solid #888;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 10px;
+            position: relative;
+            top: -10px;
+            transform: rotate(45deg);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-top: 30px;
+        }
+
+        .box2::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid #f00;
+            border-left: 10px solid transparent;
+            border-right: 10px solid #f00;
+            border-bottom: 10px solid transparent;
+            margin-left: 180px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-top: 30px;
+        }
+
+        .box3::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            background-color: #fff;
+            margin-left: 10px;
+            position: relative;
+            top: -10px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>
