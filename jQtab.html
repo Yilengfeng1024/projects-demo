@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .tab-jQ+.tab-js {
+            margin-top: 30px
+        }
+
+        .header .tab {
+            float: left;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            background: #ddd;
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+
+        .header:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .header .tab.active {
+            background: #fff;
+        }
+
+        .header .tab:last-child {
+            border-right: 1px solid #ccc;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 200px;
+            background: #fff;
+        }
+
+        .panel {
+
+            padding: 30px;
+            background: #fff;
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    jQuery实现
+    <div class="tab-jQ">
+        <div class="header">
+            <div class="tab">1</div>
+            <div class="tab">2</div>
+            <div class="tab">3</div>
+            <div class="tab">4</div>
+        </div>
+        <div class="content">
+            <div class="panel">我是1</div>
+            <div class="panel">我是2</div>
+            <div class="panel">我是3</div>
+            <div class="panel">我是4</div>
+        </div>
+    </div>
+
+    <div class="tab-js">
+        原生js实现
+        <div class="header">
+            <div class="tab">1</div>
+            <div class="tab">2</div>
+            <div class="tab">3</div>
+            <div class="tab">4</div>
+        </div>
+        <div class="content">
+            <div class="panel">我是1</div>
+            <div class="panel">我是2</div>
+            <div class="panel">我是3</div>
+            <div class="panel">我是4</div>
+        </div>
+    </div>
+    <script>
+        $('.tab-jQ .tab').on('click', function () {
+            $(this).addClass('active')
+                .siblings()
+                .removeClass('active')
+            $(this).parents('.tab-jQ')
+                .find('.panel')
+                .eq($(this).index())
+                .addClass('active')
+                .siblings()
+                .removeClass('active')
+        })
+
+        document.querySelectorAll('.tab-js .tab')
+            .forEach(function (node) {
+                node.addEventListener('click', function () {
+                    var index
+                    this.parentElement.querySelectorAll('.tab')
+                        .forEach(function (tab, idx) {
+                            tab.classList.remove('active')
+                            if (node === tab) {
+                                index = idx
+                            }
+                        })
+                    this.classList.add('active')
+
+                    this.parentElement.nextElementSibling
+                        .querySelectorAll('.panel').forEach(function (node) {
+                            node.classList.remove('active')
+                        })
+                    this.parentElement.nextElementSibling
+                        .querySelectorAll('.panel')[index]
+                        .classList.add('active')
+                })
+            })
+    </script>
+
+</body>
+
+</html>
